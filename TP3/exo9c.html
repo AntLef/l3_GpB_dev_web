@@ -1,0 +1,21 @@
+<html>
+   <head>
+        <script>
+            function validate() {
+                if (document.getElementById("login").value == "login" && document.getElementById("password").value == "password") {
+                    alert('Identifiant reconnu');
+                } else {
+                    alert('Identifiant non reconnu');
+                }
+                return false;
+            }
+        </script>
+   </head>
+   <body>
+      <p>Entrez une adresse form:</p>
+      <input type="text" id='login'>
+      <p>Entrez un password:</p>
+      <input type="password" id='password'>
+      <button type='submit' onclick="validate()">Validate!</button>
+   </body>
+</html>

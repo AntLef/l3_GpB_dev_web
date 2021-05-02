@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <header>
+        <style>
+            table, th, td, tr {
+            border-collapse: collapse;
+            width: 10px;
+            height: 10px;
+            }
+            #title {
+                text-align: right;
+                vertical-align: top;
+            }
+            div {
+                padding-top: 15px;
+            }
+        </style>
+    </header>
+<body>
+
+<div style="width: 400px;">
+    
+    <h2 style="text-align: center;">Moteur de recherche</h2>
+
+    <form action="http://univcergy.phpnet.org/CCI/form.php" >            
+
+        <table style="width:100%">
+            <tr>
+                <td id="title"><label for="key">mot clefs:</label></td>
+                <td><input type="text" id="key" name="key"></td>
+            </tr>
+            
+            <tr>
+                <td id="title"><label for="cat">Catégory:</label></td>
+                <td>                
+                    <select multiple name="cat" id="cat">
+                        <option value="1">jouet</option>
+                        <option value="2">location</option>
+                        <option value="3">voiture</option>
+                    </select> 
+                </td>
+            </tr>
+
+            <tr>
+                <td id="title"><label for="dep">Département:</label></td>
+                <td>
+                    <select name="dep" id="dep">
+                        <option value="best">Ile de France</option>
+                        <option value="loose">Le reste de la France</option>
+                    </select> 
+                </td>
+            </tr>
+            <tr>
+                <td id="title"></td>
+                <td><input type="submit" value="Submit"></td>
+            </tr>
+
+        </table> 
+            
+    </form> 
+</div>
+
+</body>
+</html>

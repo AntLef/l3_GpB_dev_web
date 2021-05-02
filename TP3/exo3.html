@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<header>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <meta charset="UTF-8">
+    <style>
+        table, tr, td {
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid rgb(0, 0, 0);
+        }
+    </style>
+
+    <script>
+        function showElements(param1, param2, param3, param4) {
+            for (i = 0; i < arguments.length; i++) {
+                col = document.createElement("td");
+                content = document.createTextNode(arguments[i]);
+                col.appendChild(content);
+                document.getElementById('row').appendChild(col)
+            }
+        }
+    </script>
+</header>
+
+<body onload="showElements('1 p', '2 p', '3 p', '4 p')">
+    <div>
+        <table>
+            <tr id="row"></tr>
+        </table>
+    </div>
+</body>
+
+</html>

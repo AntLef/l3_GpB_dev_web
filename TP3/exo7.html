@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+        correctAnswers = [['french', 'paris'], ['germany', 'berlin'], ['norway', 'oslo'], ['emirates', 'abou dabi']];
+
+        correctAnswersUser = [0, 0, 0, 0, 0];
+
+        function copyString() {
+            input1 = document.getElementById('input1').value;
+            document.getElementById('input2').value = input1;
+        }
+
+        function getSelectValue() {
+            value = document.getElementById('countries').value;
+            document.getElementById('input3').value = value;
+            document.getElementById('input4').value = value;
+        }
+
+        function qcm(question, id) {
+            number = 0
+            if (document.getElementById(question).value.toLowerCase() == correctAnswers[id-1][1]) {
+                correctAnswersUser[id-1] = 1;
+            }
+            else {
+                correctAnswersUser[id-1] = 0;
+            }
+            for(i = 0; i < correctAnswersUser.length; i++) {
+                number += correctAnswersUser[i];
+            }
+            document.getElementById('correctAnswers').innerHTML = number;
+        }
+    </script>
+</head>
+
+<body>
+
+    <div id="forms">
+        <form id="form1">
+            <label for="input1">Input 1</label>
+            <input class="input form-control" type="text" id="input1" name="input1" oninput="copyString()"><br>
+
+            <label for="input2">Input 2</label>
+            <input class="input form-control" type="text" id="input2" name="input2"><br>
+
+            <label for="countries">Sélectionnez un pays</label>
+            <select name="countries" id="countries" onchange="getSelectValue()">
+                <option value="Paris">France</option>
+                <option value="Washington">USA</option>
+                <option value="Ottawa">Canada</option>
+                <option value="Tokyo">Japon</option>
+                <option value="Stockholm">Suède</option>
+            </select>
+
+            <label for="input3">Input 3</label>
+            <input class="input form-control" type="text" id="input3" name="input3">
+        </form>
+
+        <form id="form2">
+            <label for="input4">Input 4</label>
+            <input class="input form-control" type="text" id="input4" name="input4">
+        </form>
+
+        <label for="qcm">
+            <h2>QCM</h2>
+        </label>
+        <div id="qcm">
+            <label for="japan">Capitale de la France</label>
+            <input class="input form-control" type="text" id="french" name="1" onblur="qcm(this.id, this.name)"><br>
+
+            <label for="germany">Capitale de l'Allemagne</label>
+            <input class="input form-control" type="text" id="germany" name="2" onblur="qcm(this.id, this.name)"><br>
+
+            <label for="norway">Capitale de la Norvège</label>
+            <input class="input form-control" type="text" id="norway" name="4" onblur="qcm(this.id, this.name)"><br>
+
+            <label for="emirates">Capitale des Emirats</label>
+            <input class="input form-control" type="text" id="emirates" name="5"
+                onblur="qcm(this.id, this.name)"><br><br>
+
+            <label for="correctAnswers">Réponses correctes : </label><label id="correctAnswers"></label>
+        </div>
+    </div>
+
+</body>
+
+</html>

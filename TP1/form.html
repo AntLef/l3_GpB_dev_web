@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <header>
+        <style>
+            table, th, td, tr {
+            border-collapse: collapse;
+            width: 10px;
+            height: 10px;
+            }
+            #title {
+                text-align: right;
+                vertical-align: top;
+            }
+            div {
+                padding-top: 15px;
+            }
+        </style>
+    </header>
+<body>
+
+<div>
+    <form>            
+
+            <table style="width:100%">
+                <tr>
+                    <td id="title"><label for="pseudo">votre pseudo:</label></td>
+                    <td><input type="password" id="pseudo" name="pseudo"></td>
+                </tr>
+                <tr>
+                    <td id="title"><label for="password1">mot de passe:</label></td>
+                    <td><input type="password" id="password1" name="password1"></td>
+                </tr>
+                <tr>
+                    <td id="title"><label for="password2">ressaisir mot de passe:</label></td>
+                    <td><input type="password" id="password2" name="password2"></td>
+                </tr>
+
+                <tr>
+                    <td id="title">OS préféré</td>
+                    <td>
+                        <input type="radio" id="win1" name="win1" value="win1">
+                        <label for="male">Windows XP</label><br>
+
+                        <input type="radio" id="win2" name="win2" value="win2">
+                        <label for="female">Windows Vista</label><br>
+
+                        <input type="radio" id="other" name="gender" value="other">
+                        <label for="other">MacOS X</label><br>
+
+                        <input type="radio" id="other" name="gender" value="other">
+                        <label for="other">Linux</label><br>
+
+                        <input type="radio" id="other" name="gender" value="other">
+                        <label for="other">Autre</label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td id="title">Vous possédez: </td>
+                    <td>                
+                        <input type="checkbox" id="bur" name="bur" value="bur">
+                        <label for="bur"> Ordi de bureau</label><br>
+
+                        <input type="checkbox" id="por" name="por" value="por">
+                        <label for="por"> Ordi Portable</label>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td id="title"><label for="cat">Catégory:</label></td>
+                    <td>                
+                        <select class="form-control" multiple name="cat" id="cat">
+                            <option value="1">Chomeur</option>
+                            <option value="2">Etudiant</option>
+                            <option value="3">Privée</option>
+                        </select> 
+                    </td>
+                </tr>
+
+                <tr>
+                    <td id="title"></td>
+                    <td><input class="form-control" type="submit" value="S'inscrire !"  ></td>
+                </tr>
+
+            </table> 
+            
+      </form> 
+</div>
+
+</body>
+</html>

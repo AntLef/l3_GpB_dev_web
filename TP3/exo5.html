@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<header>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+        table, tr, td {
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid rgb(0, 0, 0);
+        }
+    </style>
+
+
+</header>
+<body>
+
+<script>
+    var dodo = 2
+
+    function envie_de_dormir(dodo) {
+        if (dodo < 10) {
+            document.write("inférieur à 10");
+        } else {
+            document.write("supérieur à 10");
+        }
+    }
+    envie_de_dormir(dodo)
+
+
+    function endormi() {
+        
+        var body = document.getElementsByTagName("body")[0];
+        var tbl = document.createElement("table");
+
+        var tblBody = document.createElement("tbody");
+        
+        for (var i = 0; i < 10; i++) {
+            var row = document.createElement("tr");
+
+            for (var j = 0; j < 10; j++) {
+            var cell = document.createElement("td");
+            var cellText = document.createTextNode("ligne "+i+", colonne "+j);
+            cell.appendChild(cellText);
+            row.appendChild(cell);
+            }
+            tblBody.appendChild(row);
+        }
+        
+        tbl.appendChild(tblBody);
+        body.appendChild(tbl);
+        tbl.setAttribute("border", "3");
+    }
+    endormi()
+</script>
+
+
+</body>
+</html>

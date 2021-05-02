@@ -1,0 +1,47 @@
+html>
+
+<head>
+    <style>
+        .link {
+            margin: 5%;
+        }
+    </style>
+
+    <script>
+        var newwindow;
+
+        function openUrl() {
+            newwindow = window.open('test.html');
+        }
+
+        function closePage() {
+            newwindow.close();
+        }
+    </script>
+</head>
+
+<body>
+    <a class="link" href="#" onmouseover="openUrl()">Ouvres test.html</a>
+
+
+    <a class="link" href="#" onmouseover=closePage()>Fermes test.html</a>
+
+</body>
+
+
+<!--
+<html>
+
+    <body>
+        
+        <a href="#" onmouseover=self.close()>Close</a>
+            <br>
+            <br>
+            <br>
+            <br>
+        <a href="#" onmouseover="open('/exo8.html')">Doc</a>
+    
+    </body>
+
+</html>
+-->

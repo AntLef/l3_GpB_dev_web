@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<header>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <style>
+        table, tr, td {
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid rgb(0, 0, 0);
+        }
+        
+    </style>
+
+    <script>
+        num = 0;
+        str = "Une chaine de charactère";
+        num_and_str = str + " et le numéro " + num;
+
+        function showElements() {
+            document.getElementById('num').innerHTML = 'num = ' + num;
+            document.getElementById('str').innerHTML = 'str = ' + str;
+            document.getElementById('num_and_str').innerHTML = 'num_and_str = ' + num_and_str;
+        }
+    </script>
+</header>
+
+<body onload="showElements()">
+    <div>
+        <table>
+            <tr>
+                <td><span id="num"></span></td>
+                <td><span id="str"></td>
+                <td><span id="num_and_str"></td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>
